@@ -37,6 +37,18 @@ $(document).ready(function() {
 		offset: '75%'
 	});
 
+	$('.about-reimagined-container').waypoint(function() {
+		$('.about-reimagined-container').addClass('visible');
+	}, {
+		offset: '75%'
+	});
+
+	$('.wp-portfolio').waypoint(function() {
+		$('.wp-portfolio').addClass('animated fadeInUp');
+	}, {
+		offset: '75%'
+	});
+
 });
 
 /******************************************************************************************************************************
