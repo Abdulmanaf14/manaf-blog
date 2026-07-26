@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Design System
+   ========================================================================== */
+
+:root {
+  /* Colors */
+  --primary: #3b82f6; /* Updated to match premium */
+  --bg-color: #fcfcfc;
+  --text-color: #1a1a1a;
+  --text-muted: #8c9398;
+  --border-color: rgba(0, 0, 0, 0.05);
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+
+  /* Typography */
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+
+  /* Border Radius */
+  --rounded-2xl: 16px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-default: 0.3s ease-in-out;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+/* Card Component */
+.card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--rounded-2xl);
+  padding: var(--spacing-24);
+  transition: transform var(--transition-default), box-shadow var(--transition-default);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-default), transform var(--transition-default);
+}

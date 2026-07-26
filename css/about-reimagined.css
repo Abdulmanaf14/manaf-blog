@@ -126,13 +126,15 @@
 .skill-badge {
     background: var(--product-pill-bg);
     color: #E5E7EB; /* Main body text color for badges */
-    padding: 5px 10px; /* Reduced padding */
-    border-radius: 8px;
-    font-size: 0.8rem;
+    padding: 8px 16px; /* Increased padding */
+    border-radius: 12px;
+    font-size: 1rem; /* Increased font size */
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid transparent;
-    margin: 5px; /* Add margin for spacing between badges */
+    margin: 6px; /* Increased margin */
+    align-content: center;
+
 }
 
 .skill-badge:hover {

@@ -7,22 +7,23 @@
 /* --- Base Styles & Variables --- */
 :root {
     --product-bg: #000000;
-    --product-card-bg: #f9f9f9;
-    --product-card-border: rgba(0, 0, 0, 0.05);
-    --product-card-hover-border: rgba(0, 0, 0, 0.15);
-    --product-text-heading: #1a1a1a;
-    --product-text-body: #4a4a4a;
-    --product-text-secondary: #666666;
+    /* Dark grey card background for a premium dark mode look */
+    --product-card-bg: #1a1a1a; 
+    --product-card-border: rgba(255, 255, 255, 0.1);
+    --product-card-hover-border: rgba(255, 255, 255, 0.2);
+    --product-text-heading: #ffffff;
+    --product-text-body: #cccccc;
+    --product-text-secondary: #999999;
     --header-text-heading: #ffffff;
     --header-text-body: #cccccc;
     --product-accent-gradient: linear-gradient(90deg, #8B5CF6, #EC4899);
-    --product-pill-bg: rgba(0, 0, 0, 0.05);
-    --product-pill-hover: rgba(0, 0, 0, 0.1);
+    --product-pill-bg: rgba(255, 255, 255, 0.1);
+    --product-pill-hover: rgba(255, 255, 255, 0.2);
 }
 
 .products-section {
     background-color: var(--product-bg);
-    padding: 100px 0;
+    padding: var(--spacing-64) 0;
     position: relative;
     overflow: hidden;
     border-top: 1px solid var(--product-card-border);

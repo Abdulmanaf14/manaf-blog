@@ -1,8 +1,8 @@
-/* Engineering Impact Section - Premium Light Mode with Dark Cards */
+/* Engineering Impact Section */
 
 .expertise-section {
-    background-color: #ffffff;
-    padding: 40px 0;
+    background-color: var(--bg-color);
+    padding: var(--spacing-48) 0;
 }
 
 .expertise-container {
@@ -10,7 +10,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: var(--spacing-24);
 }
 
 @media (max-width: 991px) {
@@ -21,33 +21,27 @@
 
 .section-badge {
     display: inline-block;
-    padding: 2px 8px;
-    border-radius: 4px;
+    padding: var(--spacing-4) var(--spacing-8);
+    border-radius: var(--rounded-2xl);
     background: #f0f7ff;
-    color: #0071e3;
-    font-size: 0.7rem;
+    color: var(--primary);
+    font-size: var(--font-size-sm);
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-8);
     text-transform: uppercase;
 }
 
 .expertise-section h2 {
-    color: #111111;
-    font-size: 1.75rem;
-    margin-bottom: 20px;
+    color: var(--text-color);
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-24);
 }
 
-.expertise-left {
+.expertise-left, .expertise-right {
     flex: 1;
-    border: 1px solid #161515;
-    border-radius: 16px;
-    padding: 20px;
-}
-.expertise-right {
-    flex: 1;
-    border: 1px solid #080808;
-    border-radius: 16px;
-    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounded-2xl);
+    padding: var(--spacing-24);
 }
 
 /* Capabilities (Left) - Flex Tag Cloud */
