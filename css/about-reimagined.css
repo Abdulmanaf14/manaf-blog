@@ -1,13 +1,13 @@
 /*
 ================================================================
-  About Section - Reimagined v2
+  About Section - Reimagined v4
 ================================================================
 */
 
 /* --- Section Base --- */
 .about-section {
     background-color: #050505;
-    color: #CCCCCC; /* Corrected font color */
+    color: #E5E7EB;
     padding: 120px 0;
     border-top: 1px solid var(--product-card-border);
     overflow: hidden;
@@ -42,6 +42,7 @@
 /* --- Layout --- */
 .about-layout {
     display: flex;
+    flex-direction: row-reverse; 
     align-items: flex-start;
     gap: 80px;
     position: relative;
@@ -49,9 +50,9 @@
 
 .about-image-col {
     flex: 2;
-    position: -webkit-sticky; /* For Safari */
+    position: -webkit-sticky;
     position: sticky;
-    top: 120px; /* Adjust based on header height */
+    top: 120px;
     height: fit-content;
 }
 
@@ -65,7 +66,6 @@
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    /* Parallax will be handled by JS */
 }
 
 .about-image-wrapper img {
@@ -80,7 +80,7 @@
 .about-content-col h2 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--product-text-heading);
+    color: #FFFFFF;
     margin-bottom: 20px;
     letter-spacing: -1px;
     line-height: 1.3;
@@ -90,46 +90,49 @@
     font-size: 1.2rem;
     line-height: 1.7;
     margin-bottom: 30px;
-    color: #A0A0A0; /* Lighter than body but not as bright as heading */
+    color: #B0B0B0;
 }
 .about-content-col p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 30px;
+    color: #E5E7EB;
 }
 
 /* --- New Skills Grid --- */
 .skills-grid-container {
-    margin-top: 40px;
-    padding-top: 30px;
+    margin-top: 50px; /* Reduced spacing */
+    padding-top: 40px; /* Reduced spacing */
     border-top: 1px solid var(--product-card-border);
 }
 
 .skills-grid-container h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     color: var(--product-text-heading);
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Slightly reduced */
+    text-align: center;
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the badges within the container */
+    gap: 10px; /* Reduced gap */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .skill-badge {
     background: var(--product-pill-bg);
-    color: #CCCCCC;
-    padding: 12px 15px;
+    color: #E5E7EB; /* Main body text color for badges */
+    padding: 5px 10px; /* Reduced padding */
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     transition: all 0.3s ease;
     border: 1px solid transparent;
+    margin: 5px; /* Add margin for spacing between badges */
 }
 
 .skill-badge:hover {
@@ -138,27 +141,20 @@
     transform: translateY(-2px);
 }
 
-.skill-badge svg {
-    width: 20px;
-    height: 20px;
-    fill: #E0E0E0; /* Default color for icons */
-}
+/* Removed specific SVG styling as icons are being removed */
 
 
 /* --- Responsive --- */
 @media (max-width: 991px) {
     .about-layout {
-        flex-direction: column;
+        flex-direction: column; 
         gap: 60px;
     }
     .about-image-col {
-        position: relative; /* Un-stick on smaller screens */
+        position: relative;
         top: auto;
         width: 100%;
-    }
-    .about-image-wrapper {
-        width: 80%;
-        margin: 0 auto;
+        order: -1;
     }
 }
 
@@ -172,11 +168,8 @@
     .about-content-col h2 {
         font-size: 2rem;
     }
-    .about-image-wrapper {
-        width: 100%;
-    }
     .skills-grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); /* Further adjustment for small screens */
     }
 }
 
