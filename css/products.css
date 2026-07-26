@@ -1,0 +1,267 @@
+/*
+================================================================
+  Products I've Built Section - Bento Grid
+================================================================
+*/
+
+/* --- Base Styles & Variables --- */
+:root {
+    --product-bg: #000000;
+    --product-card-bg: rgba(18, 18, 18, 0.7);
+    --product-card-border: rgba(255, 255, 255, 0.1);
+    --product-card-hover-border: rgba(255, 255, 255, 0.2);
+    --product-text-heading: #FFFFFF;
+    --product-text-body: #A0A0A0;
+    --product-text-secondary: #888888;
+    --product-accent-gradient: linear-gradient(90deg, #8B5CF6, #EC4899);
+    --product-pill-bg: rgba(255, 255, 255, 0.07);
+    --product-pill-hover: rgba(255, 255, 255, 0.12);
+}
+
+.products-section {
+    background-color: var(--product-bg);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--product-card-border);
+}
+
+/* Background Effects */
+.products-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 15% 35%, rgba(139, 92, 246, 0.1), transparent 30%),
+        radial-gradient(circle at 85% 65%, rgba(236, 72, 153, 0.1), transparent 30%);
+    z-index: 1;
+}
+
+.products-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Section Header --- */
+.products-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.products-header h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--product-text-heading);
+    letter-spacing: -1.5px;
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.products-header p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--product-text-body);
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Bento Grid Layout --- */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 20px;
+}
+
+/* --- Product Card Base Styles --- */
+.product-card-bento {
+    background: var(--product-card-bg);
+    border: 1px solid var(--product-card-border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.product-card-bento.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-card-bento:hover {
+    transform: translateY(-5px);
+    border-color: var(--product-card-hover-border);
+}
+
+/* Grid Span Classes */
+.grid-col-span-2 { grid-column: span 2; }
+.grid-col-span-3 { grid-column: span 3; }
+.grid-col-span-4 { grid-column: span 4; }
+.grid-row-span-2 { grid-row: span 2; }
+
+/* --- Card Content Styling --- */
+.product-card-bento .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.product-card-bento h3 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--product-text-heading);
+    letter-spacing: -0.5px;
+}
+
+.product-card-bento .category-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background-color: var(--product-pill-bg);
+    color: var(--product-text-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.product-card-bento .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--product-text-body);
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-pill {
+    background: var(--product-pill-bg);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--product-text-body);
+    transition: all 0.3s ease;
+}
+.tech-pill:hover {
+    background: var(--product-pill-hover);
+    transform: translateY(-2px);
+}
+
+.metrics {
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid var(--product-card-border);
+    padding-top: 20px;
+}
+
+.metric-chip {
+    text-align: left;
+}
+
+.metric-chip .value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--product-text-heading);
+    margin-bottom: 2px;
+}
+
+.metric-chip .label {
+    font-size: 0.8rem;
+    color: var(--product-text-secondary);
+    text-transform: uppercase;
+}
+
+/* Large card specific styles */
+.product-card-bento.grid-row-span-2 {
+    justify-content: flex-end; /* Align content to bottom */
+    position: relative;
+    overflow: hidden;
+    padding: 32px;
+}
+
+.product-card-bento.grid-row-span-2 h3 {
+    font-size: 2.25rem;
+}
+
+.product-card-bento.grid-row-span-2 .card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.product-card-bento.grid-row-span-2 .browser-mockup {
+    position: absolute;
+    top: -20%;
+    right: -30%;
+    width: 80%;
+    opacity: 0.2;
+    transform: rotate(20deg);
+    transition: all 0.5s ease;
+}
+
+.product-card-bento.grid-row-span-2:hover .browser-mockup {
+    opacity: 0.3;
+    transform: rotate(10deg) scale(1.05);
+}
+
+.browser-mockup .browser-header {
+    background: rgba(0,0,0,0.3);
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 991px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* All cards take full width on this breakpoint */
+    .grid-col-span-2,
+    .grid-col-span-3,
+    .grid-col-span-4 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .products-header h1 {
+        font-size: 2.5rem;
+    }
+    .products-header p {
+        font-size: 1.1rem;
+    }
+    .bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(150px, auto);
+    }
+    /* All cards take full width */
+    .grid-col-span-2,
+    .grid-col-span-3,
+    .grid-col-span-4 {
+        grid-column: span 1;
+    }
+    .product-card-bento.grid-row-span-2 {
+       min-height: 400px;
+    }
+}
