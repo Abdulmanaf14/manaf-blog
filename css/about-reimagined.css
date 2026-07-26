@@ -27,7 +27,7 @@
 .about-header .arrow {
     font-size: 4.5rem;
     font-weight: 600;
-    color: var(--product-text-heading);
+    color: #ded4d4;
     letter-spacing: -2px;
     font-family: 'Inter', sans-serif;
 }
@@ -109,7 +109,7 @@
 .skills-grid-container h3 {
     font-size: 2rem;
     font-weight: 500;
-    color: var(--product-text-heading);
+    color: #ded4d4;
     margin-bottom: 15px; /* Slightly reduced */
     text-align: center;
 }

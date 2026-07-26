@@ -7,15 +7,17 @@
 /* --- Base Styles & Variables --- */
 :root {
     --product-bg: #000000;
-    --product-card-bg: rgba(18, 18, 18, 0.7);
-    --product-card-border: rgba(255, 255, 255, 0.1);
-    --product-card-hover-border: rgba(255, 255, 255, 0.2);
-    --product-text-heading: #FFFFFF;
-    --product-text-body: #A0A0A0;
-    --product-text-secondary: #888888;
+    --product-card-bg: #f9f9f9;
+    --product-card-border: rgba(0, 0, 0, 0.05);
+    --product-card-hover-border: rgba(0, 0, 0, 0.15);
+    --product-text-heading: #1a1a1a;
+    --product-text-body: #4a4a4a;
+    --product-text-secondary: #666666;
+    --header-text-heading: #ffffff;
+    --header-text-body: #cccccc;
     --product-accent-gradient: linear-gradient(90deg, #8B5CF6, #EC4899);
-    --product-pill-bg: rgba(255, 255, 255, 0.07);
-    --product-pill-hover: rgba(255, 255, 255, 0.12);
+    --product-pill-bg: rgba(0, 0, 0, 0.05);
+    --product-pill-hover: rgba(0, 0, 0, 0.1);
 }
 
 .products-section {
@@ -54,7 +56,7 @@
 .products-header h1 {
     font-size: 3.5rem;
     font-weight: 600;
-    color: var(--product-text-heading);
+    color: var(--header-text-heading);
     letter-spacing: -1.5px;
     margin-bottom: 16px;
     font-family: 'Inter', sans-serif;
@@ -63,7 +65,7 @@
 .products-header p {
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--product-text-body);
+    color: var(--header-text-body);
     max-width: 700px;
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
@@ -88,8 +90,6 @@
     flex-direction: column;
     justify-content: space-between;
     transition: all 0.3s ease;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;

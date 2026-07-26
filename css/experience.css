@@ -1,136 +1,155 @@
-/* Experience Section Styles - Premium Light Mode (Matches Style) */
+/* Experience Section Styles - Premium Light Mode (Apple/Linear/Notion Aesthetic) */
 
 .experience-section {
-    background-color: #fcfcfc; /* Match premium base */
-    padding: 80px 0;
+    background-color: #ffffff; /* Brighter white */
+    padding: 100px 0;
     position: relative;
+    overflow: hidden;
 }
 
 .experience-container {
-    max-width: 900px;
+    max-width: 800px; /* Tighter layout */
     margin: 0 auto;
 }
 
 .experience-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .experience-header h2 {
     font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #111111;
+    letter-spacing: -0.04em;
 }
 
 .experience-header p {
-    color: #4a5568;
-    font-size: 1.1rem;
+    color: #555555;
+    font-size: 1.25rem;
+    font-weight: 400;
 }
 
 .timeline {
     position: relative;
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
+/* Vertical Stepper Line */
 .timeline::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 12px;
+    top: 20px;
     width: 2px;
     height: 100%;
-    background: #e2e8f0; /* Neutral, subtle timeline */
-    border-radius: 2px;
+    background: #e5e5e5;
+    z-index: 1;
 }
 
 .exp-card {
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-    padding: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 20px; /* Smoother rounding */
+    padding: 32px;
     margin-bottom: 40px;
     position: relative;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); /* Subtle shadow */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .exp-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+    border-color: #d1d1d1;
 }
 
+/* Stepper Node */
 .exp-card::before {
     content: "";
     position: absolute;
-    left: -29px;
-    top: 35px;
-    width: 20px;
-    height: 20px;
-    background: #fcfcfc;
-    border: 3px solid #cbd5e0;
+    left: -28px;
+    top: 36px;
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border: 3px solid #0071e3; /* Blue accent */
     border-radius: 50%;
+    z-index: 2;
+}
+
+.exp-card.current::before {
+    background: #0071e3;
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
 }
 
 .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .exp-role h3 {
-    font-size: 1.3rem;
-    color: #1a1a1a;
+    font-size: 1.25rem;
+    color: #111111;
     margin: 0;
     font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .exp-company {
-    color: #4a5568;
-    font-weight: 500;
+    color: #555555;
+    font-weight: 400;
     font-size: 1rem;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .exp-meta {
     text-align: right;
-    color: #718096;
+    color: #888888;
     font-size: 0.9rem;
     font-weight: 500;
+    white-space: nowrap;
+    padding-left: 10px;
 }
 
 .exp-achievements {
-    color: #4a5568;
-    line-height: 1.6;
+    color: #333333;
+    line-height: 1.7;
     margin: 20px 0;
-    font-size: 15px;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+
+.exp-achievements li {
+    margin-bottom: 8px;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 20px;
 }
 
 .tech-pill {
-    background: #f7fafc;
-    color: #4a5568;
+    background: #f5f5f7;
+    color: #333333;
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 0.8rem;
-    border: 1px solid #e2e8f0;
     font-weight: 500;
 }
 
 .current-badge {
-    background: #e6fffa;
-    color: #2c7a7b;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
+    background: #eef7ff;
+    color: #0071e3;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
     margin-left: 10px;
-    text-transform: uppercase;
     font-weight: 600;
     vertical-align: middle;
 }
