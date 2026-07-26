@@ -24,6 +24,10 @@
     <link href="assets/flexslider/flexslider.css" rel="stylesheet">
 	<!-- Theme Style -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Hero Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 	<!-- Animations -->
     <link href="css/animate.css" rel="stylesheet">
 	<!-- Custom Favicon -->
@@ -42,74 +46,43 @@
 
 
 	  	<!-- ==========================
-        HEADER SECTION 
+        HEADER / HERO SECTION 
         =========================== -->
-        <header id="home">
-		    <!-- creative menu -->
-            <div class="container-fluid">
-              <div class="row">
-                <div class="menu-wrap">
-				<nav class="menu">
-				    <!-- Menu Links -->
-					<div class="icon-list">
-						<a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
-						<a href="index.html#about"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
-						<a href="index.html#service"><i class="fa fa-fw fa-laptop"></i><span>technologies</span></a>
-						<a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Works</span></a>
-						<!-- <a href="index.html#blog"><i class="fa fa-fw fa-rss"></i><span>Blog</span></a> -->
-						<a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
-					</div>
-				</nav>
-			    </div>
-			    <button class="menu-button" id="open-button"></button><!-- menu button -->
-              </div><!--/row-->
-            </div><!--/container-->
-		  <!-- Header Image -->
-          <section class="hero" id="hero">
-            <div class="container">
-			  <!-- Slider Button (don't edit!)-->
-              <div class="row">
-                <div class="col-md-12 text-right navicon">
-                  <a id="nav-toggle" class="nav_slide_button" href="index.html#"><span></span></a>
-                </div>
+        <header class="hero-header" id="home">
+          <div class="hero-shell">
+            <nav class="hero-nav" aria-label="Primary">
+              <a href="index.html#home" class="hero-logo">abdulmanaf.</a>
+              <ul class="hero-nav-links">
+                <li><a href="index.html#portfolio">Work</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <section class="hero-landing" id="hero" aria-label="Introduction">
+              <div class="hero-image">
+                <img src="img/manaf-portrait.png" alt="Manaf">
               </div>
-			  <!-- HEADER HEADLINE -->
-              <div class="row">
-                <div class="col-md-6 inner">
-                  <h1 class="animated fadeInDown">
-                   <span>Abdul <br> Manaf Kundaduka</span>
-                  </h1><!-- Title -->
-                  <h3 ><span class="col-md-6  inner">Software Developer</span></h3><!-- Text Rotator -->
-                  
-                  
-                  
+              <div class="hero-copy">
+                <h1 class="hero-headline">
+                  Building Scalable Software<br>
+                  for Enterprise Products
+                </h1>
+                <div class="hero-links">
+                  <a href="index.html#portfolio">Work</a>
+                  <span aria-hidden="true">—</span>
+                  <a href="index.html#about">About</a>
+                  <span aria-hidden="true">—</span>
+                  <a href="index.html#contact">Contact</a>
+                  <span aria-hidden="true">—</span>
+                  <a href="/MANAF_DEVELOPER.pdf" download>Resume</a>
                 </div>
-        
+                <p class="hero-subheading">
+                  Senior Full Stack Software Engineer with 4+ years of experience building enterprise SaaS products across FinTech, HealthTech, and Biometric Identity. Passionate about designing scalable applications, leading engineering teams, and delivering modern web experiences using React, Next.js, Angular, NestJS, TypeScript, and AWS.
+                </p>
               </div>
-              <!-- <div style="    color: #065465;
-              font-size: 16px;
-              font-family: cursive;
-              font-weight: 100;
-              font-style: italic;
-              margin-top:2rem; font-weight:bold
-              ;background-color: white;    width: fit-content;"
-              
-              
-              >
-              <span>"In the world of software, <br>the only limit is the extent of your imagination."</span>
-              </div> -->
-			  <!-- Learn More Button -->
-              <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center">
-                  <a href="index.html#about" class="scrollto wow fadeInUp delay-5s ">
-			            <p>SEE MORE</p>
-			            <p class="scrollto--arrow"><img src="img/scroll-down.png" alt="scroll down arrow"></p>
-			        </a>
-                </div>
-              </div>
-            </div>
-          </section>
-		  <!-- Header Image End -->
+            </section>
+          </div>
         </header>
 		<!-- ==========================
         HEADER SECTION END  
@@ -272,7 +245,7 @@
 		    <!-- Headline -->
             <div class="row">
               <h1 class="arrow">
-                Recent <span>Porojects</span>
+                Recent <span>Projects</span>
               </h1>
             </div>
           </div>
@@ -563,8 +536,6 @@
            
             </div>
 
-            <div class="container">
-            
             <div class="row contact-details" style="margin-top: 1rem;">
                     <!--resume Box -->
                     <div class="col-md-4" >
@@ -573,7 +544,6 @@
                         <p><a href="/MANAF_DEVELOPER.pdf" download>Download Here</a></p>
                       </div>
                     </div>
-                  </div>
                   </div>
 			<div class="row">
 			  <!-- Google Maps (Change your Settings below) -->
