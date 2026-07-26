@@ -1,0 +1,276 @@
+/*
+* experience-reimagined.css
+* Styles for the redesigned experience section
+*/
+
+/* Main container for the new experience section */
+.experience-reimagined {
+    background-color: #f8f9fa; /* A very light grey, almost white */
+    padding: 80px 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.experience-reimagined .container {
+    max-width: 900px;
+}
+
+/* Header for the section */
+.experience-reimagined-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.experience-reimagined-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-family: 'Instrument Serif', serif;
+}
+
+.experience-reimagined-header p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Staggered animation container */
+.experience-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Individual experience card */
+.exp-card-reimagined {
+    display: flex;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem; /* rounded-2xl is approx 1rem */
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.exp-card-reimagined:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #007aff; /* Apple-like blue accent */
+    transition: width 0.3s ease;
+}
+
+.exp-card-reimagined:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-color: #cdd2d8;
+}
+
+.exp-card-reimagined:hover:before {
+    width: 6px;
+}
+
+/* Left side of the card */
+.exp-card-left {
+    flex: 0 0 22%;
+    padding-right: 20px;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+}
+
+.company-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.exp-card-reimagined:hover .company-logo {
+    transform: scale(1.1);
+}
+
+.company-logo i {
+    width: 24px;
+    height: 24px;
+    color: #333;
+}
+
+.exp-company-name {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 1rem;
+}
+
+.exp-duration {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.exp-duration i {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+.promotion-badge {
+    margin-top: auto; /* Pushes to the bottom */
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: #e0f2fe;
+    color: #0c84c4;
+    border-radius: 6px;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.promotion-badge i {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+/* Right side of the card */
+.exp-card-right {
+    flex: 1 1 78%;
+    padding-left: 24px;
+}
+
+.exp-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.exp-title i {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    color: #666;
+}
+
+.exp-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+.exp-achievements-reimagined {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+}
+
+.exp-achievements-reimagined li {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.exp-achievements-reimagined li::before {
+    content: '•';
+    margin-right: 10px;
+    color: #007aff;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.exp-tech-stack {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-pill-reimagined {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: #f3f4f6;
+    border-radius: 9999px; /* pill shape */
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.tech-pill-reimagined i {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    color: #6b7280;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered delay for cards */
+.exp-card-reimagined:nth-child(1) { animation-delay: 0.1s; }
+.exp-card-reimagined:nth-child(2) { animation-delay: 0.2s; }
+.exp-card-reimagined:nth-child(3) { animation-delay: 0.3s; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exp-card-reimagined {
+        flex-direction: column;
+    }
+
+    .exp-card-left {
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+        padding-right: 0;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .company-logo {
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
+    
+    .company-info-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .promotion-badge {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .exp-card-right {
+        padding-left: 0;
+    }
+}

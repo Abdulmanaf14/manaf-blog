@@ -8,14 +8,14 @@
 .expertise-container {
     max-width: 950px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 20px;
 }
 
 @media (max-width: 991px) {
     .expertise-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 }
 
@@ -35,6 +35,19 @@
     color: #111111;
     font-size: 1.75rem;
     margin-bottom: 20px;
+}
+
+.expertise-left {
+    flex: 1;
+    border: 1px solid #161515;
+    border-radius: 16px;
+    padding: 20px;
+}
+.expertise-right {
+    flex: 1;
+    border: 1px solid #080808;
+    border-radius: 16px;
+    padding: 20px;
 }
 
 /* Capabilities (Left) - Flex Tag Cloud */
