@@ -1,0 +1,100 @@
+/* Engineering Impact Section - Premium Light Mode with Dark Cards */
+
+.expertise-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+.expertise-container {
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 991px) {
+    .expertise-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #f0f7ff;
+    color: #0071e3;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.expertise-section h2 {
+    color: #111111;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+/* Capabilities (Left) - Flex Tag Cloud */
+.capabilities-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.capability-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #ffffff;
+    background: #1a1a1a; /* Dark Card */
+    transition: all 0.2s ease;
+}
+
+.capability-tag:hover {
+    border-color: #0071e3;
+    background: #222222;
+}
+
+.capability-tag i {
+    font-size: 14px;
+    color: #888888;
+}
+
+/* Impact (Right) - Stats Dashboard */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.impact-card {
+    background: #1a1a1a; /* Dark Card */
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.impact-card.large {
+    grid-column: span 3;
+    text-align: left;
+}
+
+.impact-card .stat {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.impact-card .label {
+    font-size: 0.7rem;
+    color: #aaaaaa;
+}
