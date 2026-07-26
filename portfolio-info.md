@@ -9,7 +9,7 @@ Senior Full Stack Software Engineer with 4+ years of experience building enterpr
 
 About Me
 
-I'm Abdul Manaf, a Senior Full Stack Software Engineer based in Dubai.
+I'm Abdul Manaf, a Senior Full Stack Software Engineer.
 
 Over the past four years, I've built production-ready applications used by enterprises in FinTech, HealthTech, and Biometric Identity. My experience spans frontend architecture, backend development, cloud infrastructure, and scalable SaaS platforms.
 
@@ -119,6 +119,6 @@ Improved application performance and user experience across multiple enterprise 
 Contact
 Let's Build Something Great Together
 
-I'm currently based in Dubai and open to opportunities in Full Stack Development, Frontend Engineering, and Technical Leadership.
+I'm currently open to opportunities in Full Stack Development, Frontend Engineering, and Technical Leadership.
 
 If you're building scalable products and looking for someone passionate about engineering, I'd love to connect.
