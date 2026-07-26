@@ -1358,6 +1358,7 @@ ul.slides li {
 
 	.hero-nav {
 		margin-bottom: 40px;
+		gap: 20px;
 	}
 
 	.hero-nav-links {
