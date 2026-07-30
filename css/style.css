@@ -450,14 +450,21 @@ table {
 }
 /* ==========================================================================Hero Landing========================================================================== */
 .hero-header {
-	background: #f9f9f9;
-	color: #111111;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/manaf-cover.png') no-repeat center center;
+	background-size: contain;
+	color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-shell {
 	max-width: none;
 	margin: 0;
 	padding: 32px 0 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-nav {
@@ -465,7 +472,8 @@ table {
 	align-items: center;
 	justify-content: space-between;
 	max-width: 1320px;
-	margin: 0 auto 72px;
+    width: 100%;
+	margin: 0 auto 0;
 	padding: 0 48px;
 }
 
@@ -473,7 +481,7 @@ table {
 	font-family: 'Inter', sans-serif;
 	font-size: 18px;
 	font-weight: 600;
-	color: #111111;
+	color: #ffffff;
 	text-decoration: none;
 	border-bottom: none;
 	letter-spacing: -0.02em;
@@ -481,7 +489,7 @@ table {
 
 .hero-logo:hover,
 .hero-logo:focus {
-	color: #111111;
+	color: #ffffff;
 	opacity: 0.7;
 }
 
@@ -498,7 +506,7 @@ table {
 	font-family: 'Inter', sans-serif;
 	font-size: 15px;
 	font-weight: 500;
-	color: #111111;
+	color: #ffffff;
 	text-decoration: none;
 	border-bottom: none;
 }
@@ -510,49 +518,38 @@ table {
 
 .hero-landing {
 	position: relative;
-	display: flex;
-	align-items: center;
-    justify-content: center;
-    gap: 80px;
-	min-height: calc(100vh - 120px);
-	padding: 48px max(48px, calc((100vw - 1320px) / 2 + 48px)) 80px;
-}
-
-.hero-image {
-    flex-shrink: 0;
-}
-
-.hero-image img {
-    width: 420px;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 50%;
-	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-	border: 10px solid #fff;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+	padding: 0 max(48px, calc((100vw - 1320px) / 2 + 48px)) 120px;
+    text-align: left;
 }
 
 .hero-copy {
 	position: relative;
 	z-index: 1;
-	max-width: 640px;
+	max-width: 800px;
+    text-align: left;
 }
 
 .hero-headline {
 	font-family: 'Inter', sans-serif;
-	font-size: clamp(42px, 3.5vw, 72px);
+	font-size: clamp(42px, 4.5vw, 90px);
 	font-weight: 600;
 	line-height: 1.2;
 	letter-spacing: -0.02em;
-	color: #111111;
+	color: #ffffff;
 	margin: 0 0 36px;
 	text-transform: none;
-	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero-links {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+    justify-content: center;
 	gap: 14px;
 	margin-bottom: 28px;
 }
@@ -561,7 +558,7 @@ table {
 	font-family: 'Inter', sans-serif;
 	font-size: 16px;
 	font-weight: 500;
-	color: #555555;
+	color: #dddddd;
 	text-decoration: none;
 	border-bottom: none;
 	letter-spacing: 1px;
@@ -573,20 +570,19 @@ table {
 }
 
 .hero-links span {
-	color: #111111;
+	color: #ffffff;
 	font-size: 14px;
 	line-height: 1;
 }
 
 .hero-subheading {
 	font-family: 'Inter', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.7;
-	color: #555555;
-	max-width: 600px;
-	margin: 0;
+	color: #e0e0e0;
+	/* max-width: 640px; */
+	margin: 0 auto;
 	word-spacing: normal;
-	text-align: justify;
 	font-weight: 400;
 }
 
@@ -1367,12 +1363,12 @@ ul.slides li {
 
 	.hero-landing {
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start; /* Horizontal alignment (left) */
+        justify-content: flex-end; /* Vertical alignment (bottom) */
 		min-height: auto;
-		padding: 0 24px 48px;
+		padding: 0 24px 0px; /* Adjusted padding-bottom */
         gap: 30px;
-        text-align: center;
-		padding-top: 30px;
+        text-align: left; /* Text alignment within hero-copy */
 	}
 
 	.hero-image img {
@@ -1382,7 +1378,7 @@ ul.slides li {
 
 	.hero-copy {
 		padding-right: 0;
-		text-align: center;
+		text-align: left; /* Ensure text is left-aligned */
 	}
 
 	.hero-headline {
@@ -1393,7 +1389,7 @@ ul.slides li {
 	.hero-links {
 		flex-direction: column;
         gap: 10px;
-        align-items: center;
+        align-items: flex-start; /* Align links to left */
 	}
 
 	.hero-links span {
@@ -1402,7 +1398,8 @@ ul.slides li {
 
 	.hero-subheading {
 		max-width: 400px;
-        margin: 0 auto;
+        margin: 0; /* Remove auto margin to allow left alignment */
+        text-align: left;
 	}
 
 	.hero h3 {
@@ -1446,11 +1443,12 @@ ul.slides li {
 
 	.hero-landing {
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start; /* Horizontal alignment (left) */
+        justify-content: flex-end; /* Vertical alignment (bottom) */
 		min-height: auto;
         gap: 40px;
-        text-align: center;
-		padding-top: 40px;
+        text-align: left; /* Text alignment within hero-copy */
+		padding-top: 0; /* Remove specific padding-top override, rely on main padding or flex */
 	}
 
 	.hero-image img {
@@ -1460,13 +1458,13 @@ ul.slides li {
 
 	.hero-copy {
 		padding-right: 0;
-		text-align: center;
+		text-align: left; /* Ensure text is left-aligned */
 	}
 
 	.hero-links {
 		flex-direction: column;
         gap: 10px;
-        align-items: center;
+        align-items: flex-start; /* Align links to left */
 	}
 
 	.hero-links span {
@@ -1475,7 +1473,8 @@ ul.slides li {
 
 	.hero-subheading {
 		max-width: 500px;
-        margin: 0 auto;
+        margin: 0; /* Remove auto margin to allow left alignment */
+        text-align: left;
 	}
 
 	.hero {
